@@ -104,7 +104,7 @@ var createConnection  = function (options) {
 					break;		
 				// method returning only first result (to use when you expect only one result)				
 				case 'first':
-					var q = "SELECT "+fields+" FROM "+tableName+qcond;
+					var q = "SELECT "+fields+" FROM "+tableName+qcond +  " LIMIT 1";
 					connection.query(q, function(err, result, fields) {
 						if(callback){
 							callback(err, result[0], fields);
