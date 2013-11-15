@@ -14,7 +14,7 @@ npm install mysql-model
 Or install from git:
 
 ```bash
-npm install git://github.com/michalkow/node-mysql-model.git
+npm install git://github.com/RobinThrift/node-mysql-model.git
 ```
 
 Usage
@@ -84,7 +84,7 @@ Parameters:
 
 - *string* **method**: uses one of find methods
 - *object* **conditions**: set find conditions
-- *function* **callback**: returns errors and results
+- *function* **callback**: The callback will be passed the parameters (errors, results, fields)
 
 Example:
 
