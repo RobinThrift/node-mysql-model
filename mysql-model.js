@@ -35,7 +35,8 @@ var createConnection  = function (options) {
 				callback=id;
 				id=this.attributes.id;
 			} 
-			var q = "SELECT * FROM "+tableName+" WHERE id="+id;
+			var idField = this.attributes.idField || 'id';
+			var q = "SELECT * FROM "+tableName+" WHERE " + idField + "="+id;
 			connection.query(q, root, function(err, result, fields) {
 				root.setSQL(result[0]);
 				if(callback){
